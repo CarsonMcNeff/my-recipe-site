@@ -4,7 +4,8 @@
 <% elsif current_user%>
 <%=link_to "#{current_user.username.camelcase}", 'user#show'%>
 <%=link_to "Log Out", signout_path, method:'delete' %>
-<%=link_to "View Your Recipes", '/'%>
+<%=link_to "View Your Saved Recipes", "users/#{current_user.id}/recipes"%>
+<%=link_to "View All Recipes", '/'%>
 <%=link_to "Upload A Recipe", upload_path%>
 <%end%>
 <br>

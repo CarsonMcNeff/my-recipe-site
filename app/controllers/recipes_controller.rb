@@ -3,7 +3,12 @@ class RecipesController < ApplicationController
 
     end
     def index 
-        @recipes = Recipe.all
+        if params[:user_id] && User.find_by(id: params[:user_id]) == current_user
+            @user = current_user
+            @recipes = @user.recipes
+        else
+            @recipes = Recipe.all
+        end
     end
 
     def show 
