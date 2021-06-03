@@ -1,0 +1,11 @@
+<%= form_for @user, url: login_path, method: :post do |f| %>
+Already Have An Account?
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit "Log In" %>
+  <br>
+  Or Sign Up Here <br> 
+  <%= link_to "Sign Up", signup_path %>
+<% end %>
