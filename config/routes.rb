@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post '/signup', to: 'users#create'
   post '/signin', to: 'session#create', as: 'signin'
   get '/signout/', to: 'session#destroy'
+  get '/upload', to: 'recipes#new', as: 'upload'
+  post '/upload', to: 'recipes#create'
   
   resources :user_ingredients
   resources :recipe_ingredients

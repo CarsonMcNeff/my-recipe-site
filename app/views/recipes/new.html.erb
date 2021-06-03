@@ -1,0 +1,17 @@
+<div class="field-with-errors">
+<%= form_for :recipe do |f| %>
+  Title: <%= f.text_field :title %>
+  <br>
+  Recipe: <%= f.text_field :text %>
+  <br>
+  Difficulty Level 1-5: <%= f.text_field :difficulty_level %>
+  <br>
+  Calories: <%= f.text_field :calories %>
+  <br>
+  Carbs: <%= f.text_field :carbs %>
+  <br>
+  Protein: <%= f.text_field :protein %>
+  <br>
+  <%= f.submit "Upload" %>
+<% end %>
+</div>

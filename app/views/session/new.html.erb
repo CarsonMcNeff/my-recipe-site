@@ -1,5 +1,6 @@
+<div class="field-with-errors">
 <%= form_for @user, url: signin_path, method: :post do |f| %>
-Log In Here
+<h1>Log In Here:</h1>
   <%= f.label :username %>
   <%= f.text_field :username %>
   <%= f.label :password %>
@@ -7,3 +8,4 @@ Log In Here
   <%= f.submit "Log In" %>
   
 <% end %>
+</div>
