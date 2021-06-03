@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/login', to: 'session#new', as: 'login'
   get '/signup', to: 'users#new', as: 'signup'
   post '/signup', to: 'users#create'
-  get '/signin', to: 'session#create', as: 'signin'
+  post '/signin', to: 'session#create', as: 'signin'
+  get '/signout/', to: 'session#destroy'
   
   resources :user_ingredients
   resources :recipe_ingredients
