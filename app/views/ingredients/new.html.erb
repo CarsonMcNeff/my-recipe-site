@@ -1,0 +1,12 @@
+<div class="field-with-errors">
+<%= form_for :ingredient do |f| %>
+  Name: <%= f.text_field :name, list: 'name' %>
+  <datalist id="name">
+    <% Ingredient.all.each do |ingredient|%>
+        <option value="<%=ingredient.name%>"></option>
+    <%end%>
+    </datalist>
+  Amount: <%= f.text_field :amount %>
+  <%= f.submit "Add Ingredient" %>
+<% end %>
+</div>

@@ -1,0 +1,8 @@
+<%@ingredients.each do |ingredient| %>
+    <%=ingredient.name%>
+    <%=ingredient.user.amount%>
+    <%=link_to "Change Amount", "users/#{@user.id}/ingredients/edit", method:patch %>
+    <%=link_to "Remove", "users/#{@user.id}/ingredients/delete", method:delete %>
+    <br>
+<%end%>
+<%=link_to "Add Ingredient", "ingredients/new"%>
